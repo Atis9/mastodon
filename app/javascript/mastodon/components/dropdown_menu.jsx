@@ -168,6 +168,7 @@ export default class Dropdown extends PureComponent {
   static propTypes = {
     children: PropTypes.node,
     icon: PropTypes.string,
+    iconComponent: PropTypes.node,
     items: PropTypes.oneOfType([PropTypes.array, ImmutablePropTypes.list]).isRequired,
     loading: PropTypes.bool,
     size: PropTypes.number,
@@ -275,6 +276,7 @@ export default class Dropdown extends PureComponent {
   render () {
     const {
       icon,
+      iconComponent,
       items,
       size,
       title,
@@ -298,6 +300,7 @@ export default class Dropdown extends PureComponent {
     }) : (
       <IconButton
         icon={!open ? icon : 'close'}
+        iconComponent={iconComponent}
         title={title}
         active={open}
         disabled={disabled}
