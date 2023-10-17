@@ -412,7 +412,7 @@ class Status extends ImmutablePureComponent {
     if (featured) {
       prepend = (
         <div className='status__prepend'>
-          <div className='status__prepend-icon-wrapper'><Icon id='thumb-tack' icon={PushPinIcon} className='status__prepend-icon' fixedWidth /></div>
+          <div className='status__prepend-icon-wrapper'><Icon id='thumb-tack' icon={PushPinIcon} className='status__prepend-icon' /></div>
           <FormattedMessage id='status.pinned' defaultMessage='Pinned post' />
         </div>
       );
@@ -421,7 +421,7 @@ class Status extends ImmutablePureComponent {
 
       prepend = (
         <div className='status__prepend'>
-          <div className='status__prepend-icon-wrapper'><Icon id='retweet' icon={RepeatIcon} className='status__prepend-icon' fixedWidth /></div>
+          <div className='status__prepend-icon-wrapper'><Icon id='retweet' icon={RepeatIcon} className='status__prepend-icon' /></div>
           <FormattedMessage id='status.reblogged_by' defaultMessage='{name} boosted' values={{ name: <a onClick={this.handlePrependAccountClick} data-id={status.getIn(['account', 'id'])} href={`/@${status.getIn(['account', 'acct'])}`} className='status__display-name muted'><bdi><strong dangerouslySetInnerHTML={display_name_html} /></bdi></a> }} />
         </div>
       );
@@ -433,7 +433,7 @@ class Status extends ImmutablePureComponent {
     } else if (status.get('visibility') === 'direct') {
       prepend = (
         <div className='status__prepend'>
-          <div className='status__prepend-icon-wrapper'><Icon id='at' icon={AlternateEmailIcon} className='status__prepend-icon' fixedWidth /></div>
+          <div className='status__prepend-icon-wrapper'><Icon id='at' icon={AlternateEmailIcon} className='status__prepend-icon' /></div>
           <FormattedMessage id='status.direct_indicator' defaultMessage='Private mention' />
         </div>
       );
@@ -442,7 +442,7 @@ class Status extends ImmutablePureComponent {
 
       prepend = (
         <div className='status__prepend'>
-          <div className='status__prepend-icon-wrapper'><Icon id='reply' icon={ReplyIcon} className='status__prepend-icon' fixedWidth /></div>
+          <div className='status__prepend-icon-wrapper'><Icon id='reply' icon={ReplyIcon} className='status__prepend-icon' /></div>
           <FormattedMessage id='status.replied_to' defaultMessage='Replied to {name}' values={{ name: <a onClick={this.handlePrependAccountClick} data-id={status.getIn(['account', 'id'])} href={`/@${status.getIn(['account', 'acct'])}`} className='status__display-name muted'><bdi><strong dangerouslySetInnerHTML={display_name_html} /></bdi></a> }} />
         </div>
       );

@@ -169,7 +169,7 @@ export default class Dropdown extends PureComponent {
   static propTypes = {
     children: PropTypes.node,
     icon: PropTypes.string,
-    iconComponent: PropTypes.node,
+    iconComponent: PropTypes.func,
     items: PropTypes.oneOfType([PropTypes.array, ImmutablePropTypes.list]).isRequired,
     loading: PropTypes.bool,
     size: PropTypes.number,
