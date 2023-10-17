@@ -5,6 +5,7 @@ import classNames from 'classnames';
 
 import ImmutablePropTypes from 'react-immutable-proptypes';
 
+import { ReactComponent as CloseIcon } from '@material-design-icons/svg/filled/close.svg';
 import { supportsPassiveEvents } from 'detect-passive-events';
 import Overlay from 'react-overlays/Overlay';
 
@@ -300,7 +301,7 @@ export default class Dropdown extends PureComponent {
     }) : (
       <IconButton
         icon={!open ? icon : 'close'}
-        iconComponent={iconComponent}
+        iconComponent={!open ? iconComponent : CloseIcon}
         title={title}
         active={open}
         disabled={disabled}
